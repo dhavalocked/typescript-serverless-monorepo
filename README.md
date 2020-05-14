@@ -17,6 +17,13 @@
   This directory follows [Nested use of plugin](https://github.com/AnomalyInnovations/serverless-bundle#nested-services)  whereve possible.
   
  Note: We need to add tsconfig file to each service as described [here](https://github.com/AnomalyInnovations/serverless-bundle/pull/51#issuecomment-582086181)
+
+
+ ### How to use it?
+ - Clone this repo.
+ - inside root directory run `npm install`
+ - go to any service. for ex. `cd services/user`
+ - Start serving using sls offline. `npm run start`
  
  
  Commands shown below should run inside specific service directory.. ex. `cd services/SERVICE_NAME`
