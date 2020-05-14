@@ -1,0 +1,37 @@
+service: user
+
+# Create an optimized package for our functions
+package:
+  individually: true
+  excludeDevDependencies: true
+
+plugins:
+  - serverless-bundle
+  - serverless-dotenv-plugin
+  - serverless-offline
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  serverless-offline:
+    port: 4000
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${env:STAGE}
+  profile: ${env:PROFILE}
+  region: ${env:REGION}
+  timeout: 30
+
+functions:
+  login:
+    handler: src/user.hello
+    events:
+      - http:
+          path: user/hello
+          method: post
+          cors: true
+
+resources:
+  # API Gateway Errors
+  - ${file(../../resources/api-gateway-errors.yml)}

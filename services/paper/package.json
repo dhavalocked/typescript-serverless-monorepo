@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "test": "npm --prefix ./../.. test auth",
+        "start": "serverless offline --skipCacheInvalidation",
+        "build": "serverless package",
+        "deploy": "serverless deploy"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

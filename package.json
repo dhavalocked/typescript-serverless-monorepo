@@ -1,0 +1,22 @@
+{
+  "name": "serverless-bundle-ts-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.51",
+    "@types/jest": "^25.2.1",
+    "serverless-bundle": "^1.4.0-beta.6",
+    "serverless-domain-manager": "^4.0.0",
+    "serverless-dotenv-plugin": "^2.4.2",
+    "serverless-offline": "^5.12.1",
+    "typescript": "^3.8.2"
+  },
+  "scripts": {
+    "test": "serverless-bundle test",
+    "start": "serverless offline",
+    "build": "serverless package",
+    "deploy": "serverless deploy"
+  },
+  "dependencies": {}
+}
