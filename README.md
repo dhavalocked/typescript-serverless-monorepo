@@ -22,6 +22,7 @@
  ### How to use it?
  - Clone this repo.
  - inside root directory run `npm install`
+ - rename .env.example to .env and change use the aws profile name you want.
  - go to any service. for ex. `cd services/user`
  - Start serving using sls offline. `npm run start`
  
